@@ -6,9 +6,9 @@
   background-size: cover;
   padding: 120px 0 150px 0;
 
-	&__title {
-		text-align: center;
-	}
+  &__title {
+    text-align: center;
+  }
 
   &__description {
     margin-top: 30px;
@@ -25,22 +25,22 @@
     flex-wrap: wrap;
 
     &__item {
-			position: relative;
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       max-width: 190px;
 
-			&:not(:last-child):after {
-				position: absolute;
-				display: inline-block;
-				content: ". . . . .";
-				font-size: 50px;
-				color: #c4c4c4;
-				right: -85px;
-				top: 10px;
-			}
+      &:not(:last-child):after {
+        position: absolute;
+        display: inline-block;
+        content: ". . . . .";
+        font-size: 50px;
+        color: #c4c4c4;
+        right: -85px;
+        top: 10px;
+      }
 
       &-description {
         margin-top: 20px;
@@ -203,3 +203,4 @@
     }
   }
 }
+ 
