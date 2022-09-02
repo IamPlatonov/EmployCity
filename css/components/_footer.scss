@@ -1,0 +1,67 @@
+.footer {
+  background-color: #3d4050;
+  padding: 30px 0;
+
+  &-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-secondary);
+
+    &__terms {
+      span {
+        text-transform: uppercase;
+      }
+    }
+
+    &__payment {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      color: #c3c3c3;
+
+      &::before,
+      &::after {
+        display: inline-block;
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 18px;
+        background: #c3c3c3;
+      }
+
+      &::before {
+        left: -40px;
+      }
+
+      &::after {
+        right: -40px;
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+
+        p {
+          margin-left: 5px;
+        }
+      }
+    }
+
+    &__contacts {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+
+      &-item {
+        display: flex;
+        align-items: center;
+
+        p {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}

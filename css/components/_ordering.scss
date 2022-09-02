@@ -1,0 +1,205 @@
+.ordering {
+  background-color: var(--color-dark);
+  background-image: url(../img/map-overlay.png);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: cover;
+  padding: 120px 0 150px 0;
+
+	&__title {
+		text-align: center;
+	}
+
+  &__description {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: #bbbbbb;
+  }
+
+  .scheme {
+    margin-top: 80px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__item {
+			position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 190px;
+
+			&:not(:last-child):after {
+				position: absolute;
+				display: inline-block;
+				content: ". . . . .";
+				font-size: 50px;
+				color: #c4c4c4;
+				right: -85px;
+				top: 10px;
+			}
+
+      &-description {
+        margin-top: 20px;
+        color: var(--color-white);
+        font-size: 16px;
+      }
+
+      &-icon {
+        width: 100px;
+      }
+    }
+  }
+
+  .form-ordering {
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    .choices__inner {
+      min-height: auto;
+      width: 370px;
+      font-size: 18px;
+      color: var(--color-dark);
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid var(--color-white);
+      border-radius: 3px;
+      padding: 10px 35px 10px 10px;
+    }
+
+    .choices__placeholder {
+      color: var(--color-dark);
+      opacity: 1;
+    }
+
+    .choices[data-type*="select-one"].is-open::after {
+      border-color: transparent transparent var(--color-white);
+    }
+
+    .is-open {
+      .choices__inner {
+        color: var(--color-white);
+        background: rgba(61, 64, 80, 1);
+        border: 1px solid #3d4050;
+        border-radius: 3px 3px 0px 0px;
+      }
+
+      .choices__list--dropdown {
+        width: 370px;
+        color: var(--color-white);
+        background: rgba(39, 39, 51, 1);
+        border: 1px solid #3d4050;
+        border-radius: 3px;
+
+        .choices__placeholder {
+          display: none;
+        }
+      }
+
+      .choices__placeholder {
+        color: var(--color-white);
+      }
+
+      .is-highlighted {
+        color: #42a9ed;
+        background: none !important;
+      }
+    }
+
+    input[type="text"] {
+      max-width: 370px;
+      width: 100%;
+      max-height: 48px;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid var(--color-white);
+      border-radius: 3px;
+      outline: none;
+      font-size: 18px;
+      color: var(--color-dark);
+      padding: 12px 35px 12px 15px;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    &__file-label {
+      background: var(--color-white);
+      border: 2px solid #3e9cdc;
+      border-radius: 3px;
+      width: 370px;
+      max-height: 48px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 15px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 15px;
+
+      &:hover {
+        border-color: var(--color-dark);
+      }
+
+      img {
+        width: 18px;
+        height: 20px;
+      }
+    }
+
+    &__range {
+      flex-grow: 1;
+
+      input[type="range"] {
+        width: 100%;
+      }
+
+      &-label {
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--color-white);
+        font-size: 18px;
+      }
+
+      &-slider {
+        appearance: none;
+        -moz-appearance: none;
+        -weblit-appearance: none;
+        outline: none;
+        height: 6px;
+        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid var(--color-white);
+        border-radius: 4px;
+
+        &::-webkit-slider-thumb {
+          appearance: none;
+          -moz-appearance: none;
+          -weblit-appearance: none;
+          width: 25px;
+          height: 25px;
+          background: #42a9ed;
+          border: 3px solid #286690;
+          border-radius: 15px;
+        }
+      }
+    }
+
+    &__btn-block {
+      margin-top: 55px;
+      text-align: center;
+
+      button {
+        max-width: 370px;
+      }
+    }
+  }
+}

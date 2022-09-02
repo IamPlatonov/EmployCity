@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+	font-size: var(--small-font-size);
+  background-color: var(--color-white);
+	color: var(--color-black);
+}
+
+img {
+	display: block;
+  max-width: 100%;
+}
+
+a {
+	color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+.title {
+	font-family: var(--font-family-title);
+	font-size: 36px;
+	text-transform: uppercase;
+	color: var(--color-white);
+
+	span {
+		color: var(--color-primary);
+	}
+}
+
+.btn-main {
+	display: inline;
+	max-width: 185px;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 15px 10px;
+	border: 1px solid;
+	border-radius: 4px;
+	
+	&:hover {
+		background: var(--color-secondary);
+		color: var(--color-primary);
+		border-color: var(--color-primary);
+		cursor: pointer;
+	}
+}
+
+.btn--primary {
+	background: var(--color-primary);
+	color: var(--color-white);
+	border-color: var(--color-white);
+}
+
+.btn--light {
+	background: var(--color-secondary);
+	color: #2A2B30;
+	border-color: #2A2B30;
+}
+
+::-webkit-input-placeholder {color: var(--color-dark);}
+::-moz-placeholder          {color: var(--color-dark);}/* Firefox 19+ */
+:-moz-placeholder           {color: var(--color-dark);}/* Firefox 18- */
+:-ms-input-placeholder      {color: var(--color-dark);}
